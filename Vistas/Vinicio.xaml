@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JMacasT2.Vistas.Vinicio"
+             Title="Vinicio">
+    <ScrollView>
+    <VerticalStackLayout
+        Spacing="20"
+        Padding="15">
+            
+         
+            <Label 
+       Text="SISTEMA DE CALIFICACION"
+               TextColor="Blue"
+                FontSize="20"
+       VerticalOptions="Center" 
+       HorizontalOptions="Center" />
+
+            <Image x:Name="local"
+          Source="uisrael2.png"  
+            HeightRequest="120"
+            />
+       
+        
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>                    <RowDefinition/>
+                
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Estudiante"
+TextColor="Blue"
+FontSize="15"
+Grid.Row="0"
+Grid.Column="0"
+VerticalTextAlignment="Center"
+HorizontalTextAlignment="Center"
+/>
+                    <Picker x:Name="pkestudiantes" 
+                        TextColor="Blue"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        >
+                    <Picker.Items >
+
+                        <x:String>Jimmy LLangari</x:String>
+                        <x:String>Javier Culcay</x:String>
+                        <x:String>Johnny Macas</x:String>
+                        <x:String>Wilson Cajisaca</x:String>
+                        <x:String>Andres Haro</x:String>
+                    </Picker.Items>
+                </Picker>
+              <!-- seguimiento 1-->
+                <Label Text="Nota Seguimiento 1"
+            TextColor="Blue"
+            FontSize="15"
+            Grid.Row="1"
+            Grid.Column="0"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            />
+                <Entry x:Name="txtNota1"
+                       Placeholder="Ingrese calificacion 1:"
+                    Keyboard="Numeric"
+                     MaxLength="4"  
+                    Grid.Row="1"
+                       Grid.Column="1"
+                    />
+             
+                <!-- examen  -->
+                <Label Text="Examen"
+ TextColor="Blue"
+ FontSize="15"
+ Grid.Row="2"
+ Grid.Column="0"
+ VerticalTextAlignment="Center"
+ HorizontalTextAlignment="Center"
+ />
+                <Entry x:Name="txtExamen1"
+                Placeholder="Ingrese Nota Examen 1:"
+                       Keyboard="Numeric"
+                       MaxLength="4" 
+         Grid.Row="2"
+            Grid.Column="1"
+         />
+
+                <!-- seguimiento 2-->
+
+                <Label Text="Nota Seguimiento 2"
+TextColor="Blue"
+FontSize="15"
+Grid.Row="3"
+Grid.Column="0"
+VerticalTextAlignment="Center"
+HorizontalTextAlignment="Center"
+/>
+                <Entry x:Name="txtNota2"
+        Placeholder="Ingrese calificacion 2:"
+        Keyboard="Numeric"
+        MaxLength="4" 
+        Grid.Row="3"
+           Grid.Column="3"
+        />
+                <!-- examen2  -->
+
+                <Label Text="Examen"
+ TextColor="Blue"
+ FontSize="15"
+ Grid.Row="4"
+ Grid.Column="0"
+ VerticalTextAlignment="Center"
+ HorizontalTextAlignment="Center"
+ />
+                <Entry x:Name="txtExamen2"
+          Placeholder="Ingrese Nota Examen 2:"
+          Keyboard="Numeric"
+          MaxLength="4" 
+         Grid.Row="4"
+            Grid.Column="4"
+         />
+
+
+               
+                <!-- fecha  -->
+
+                <Label 
+TextColor="Blue"
+FontSize="15"
+Grid.Row="5"
+Grid.Column="0"
+VerticalTextAlignment="Center"
+HorizontalTextAlignment="Center"
+/>
+                
+              
+
+               
+                
+                <Button x:Name="btnCalcular"
+                        Grid.Row="10"
+                        Grid.Column="10"
+                        Text="CALCULAR"
+                       Clicked="btnCalcular_Clicked"
+                    
+                    />
+                <Label x:Name="resultadoLabel"/>
+            </Grid>
+
+        
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

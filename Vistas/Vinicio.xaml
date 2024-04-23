@@ -5,18 +5,24 @@
              Title="Vinicio">
     <ScrollView>
     <VerticalStackLayout
-        Spacing="20"
-        Padding="15">
-            
-         
+        Spacing="1"
+        Padding="5"
+         Background="WhiteSmoke"> 
+        
+            <Label x:Name="lblUsuarioConectado"
+                   TextColor="Grey"
+     HorizontalTextAlignment="End"
+    FontSize="14" />
+
             <Label 
        Text="SISTEMA DE CALIFICACION"
-               TextColor="Blue"
+               TextColor="Grey"
                 FontSize="20"
        VerticalOptions="Center" 
        HorizontalOptions="Center" />
 
             <Image x:Name="local"
+                   Margin="10"
           Source="uisrael2.png"  
             HeightRequest="120"
             />
@@ -29,16 +35,19 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>                    <RowDefinition/>
-                
+                    <RowDefinition/>                    
+                    <RowDefinition/>
+                 
+
                 </Grid.RowDefinitions>
                 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="155"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Estudiante"
+                       Margin="10"
 TextColor="Blue"
 FontSize="15"
 Grid.Row="0"
@@ -52,6 +61,7 @@ HorizontalTextAlignment="Center"
                         Grid.Column="1"
                         VerticalTextAlignment="Center"
                         HorizontalTextAlignment="Center"
+                            Margin="8"
                         >
                     <Picker.Items >
 
@@ -70,6 +80,7 @@ HorizontalTextAlignment="Center"
             Grid.Column="0"
             VerticalTextAlignment="Center"
             HorizontalTextAlignment="Center"
+                       Margin="8"
             />
                 <Entry x:Name="txtNota1"
                        Placeholder="Ingrese calificacion 1:"
@@ -77,6 +88,7 @@ HorizontalTextAlignment="Center"
                      MaxLength="4"  
                     Grid.Row="1"
                        Grid.Column="1"
+                       Margin="8"
                     />
              
                 <!-- examen  -->
@@ -87,6 +99,7 @@ HorizontalTextAlignment="Center"
  Grid.Column="0"
  VerticalTextAlignment="Center"
  HorizontalTextAlignment="Center"
+                       Margin="8"
  />
                 <Entry x:Name="txtExamen1"
                 Placeholder="Ingrese Nota Examen 1:"
@@ -94,6 +107,7 @@ HorizontalTextAlignment="Center"
                        MaxLength="4" 
          Grid.Row="2"
             Grid.Column="1"
+                       Margin="8"
          />
 
                 <!-- seguimiento 2-->
@@ -105,6 +119,7 @@ Grid.Row="3"
 Grid.Column="0"
 VerticalTextAlignment="Center"
 HorizontalTextAlignment="Center"
+                       Margin="8"
 />
                 <Entry x:Name="txtNota2"
         Placeholder="Ingrese calificacion 2:"
@@ -112,6 +127,7 @@ HorizontalTextAlignment="Center"
         MaxLength="4" 
         Grid.Row="3"
            Grid.Column="3"
+                       Margin="8"
         />
                 <!-- examen2  -->
 
@@ -122,6 +138,7 @@ HorizontalTextAlignment="Center"
  Grid.Column="0"
  VerticalTextAlignment="Center"
  HorizontalTextAlignment="Center"
+                       Margin="8"
  />
                 <Entry x:Name="txtExamen2"
           Placeholder="Ingrese Nota Examen 2:"
@@ -129,36 +146,46 @@ HorizontalTextAlignment="Center"
           MaxLength="4" 
          Grid.Row="4"
             Grid.Column="4"
+                       Margin="8"
          />
 
 
                
                 <!-- fecha  -->
 
-                <Label 
+                <Label Text="Fecha"
 TextColor="Blue"
 FontSize="15"
 Grid.Row="5"
 Grid.Column="0"
+ Margin="8"
 VerticalTextAlignment="Center"
 HorizontalTextAlignment="Center"
+                       
 />
+                <DatePicker x:Name="dpfechas" Date="04/21/2024"
+             Format="dd/mm/yyyy"
+                            Grid.Row="5"
+                          Grid.Column="5"
+                             Margin="8"
+                            />
                 
-              
-
                
                 
-                <Button x:Name="btnCalcular"
+                       <Button x:Name="btnCalcular"
                         Grid.Row="10"
                         Grid.Column="10"
                         Text="CALCULAR"
                        Clicked="btnCalcular_Clicked"
-                    
+                    Margin="8"
+                        ImageSource="calcular.png"
                     />
-                <Label x:Name="resultadoLabel"/>
+                
             </Grid>
 
-        
+   
+              
+
 
 
         </VerticalStackLayout>

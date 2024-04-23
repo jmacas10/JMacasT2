@@ -4,15 +4,19 @@ namespace JMacasT2.Vistas;
 
 public partial class Vinicio : ContentPage
 {
-    public Vinicio()
+    public Vinicio( string usuario)
     {
         InitializeComponent();
+        DisplayAlert("OK"," Bien Venido: " +usuario,"Cerrar");
+        lblUsuarioConectado.Text = " Usuario Conectado: " +usuario;
     }
 
     private void btnCalcular_Clicked(object sender, EventArgs e)
     {
         // Obtener la fecha actual del sistema
-        DateTime fechaActual = DateTime.Now;
+        //DateTime fechaActual = DateTime.Now;
+        //+ fechaActual.ToString("dd/MM/yyyy")ba/*
+        string fechaActual = dpfechas.Date.ToString("dd/MM/yyyy");
         // se declara las variables que se usan para la conversion
         double nota1, examen1, nota2, examen2;
 
@@ -47,7 +51,7 @@ public partial class Vinicio : ContentPage
 
                     if (notaFinal >= 7 && notaFinal <= 10)
                     {
-                        DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual.ToString("dd/MM/yyyy") + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nAPROBADO", "Cerrar");
+                        DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nAPROBADO", "Cerrar");
                     }
                     else
                     {
@@ -55,7 +59,7 @@ public partial class Vinicio : ContentPage
                         if (notaFinal >= 5 && notaFinal <= 6.9)
                         {
                             //DisplayAlert("Alerta", " COMPLEMENTARIO " + notaFinal.ToString(), "Cerrar");
-                            DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual.ToString("dd/MM/yyyy") + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nCOMPLEMENTARIO", "Cerrar");
+                            DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nCOMPLEMENTARIO", "Cerrar");
 
                         }
                         else
@@ -63,7 +67,10 @@ public partial class Vinicio : ContentPage
                             if (notaFinal <= 5)
                             {
                                 //DisplayAlert("Alerta", "REPROBADO " + notaFinal.ToString(), "Cerrar");
-                                DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual.ToString("dd/MM/yyyy") + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nREPROBADO", "Cerrar");
+                                //DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual.ToString("dd/MM/yyyy") + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nREPROBADO", "Cerrar");
+                                DisplayAlert("Alerta", "ESTUDIANTE: " + dato + "\nFECHA: " + fechaActual + "\nPARCIAL 1: " + parcial1.ToString() + "\nPARCIAL 2: " + parcial2.ToString() + "\nNOTA FINAL: " + notaFinal.ToString() + "\nREPROBADO", "Cerrar");
+
+
                             }
 
                         }

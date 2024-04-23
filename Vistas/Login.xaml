@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JMacasT2.Vistas.Login"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Title="Login">
+
+    <ScrollView>
+    <VerticalStackLayout
+        Margin="10">
+       
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                 <RowDefinition/>
+
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Icono del usuario -->
+            <Image x:Name="localLogin" Grid.Row="0" Grid.Column="1"
+  Source="ulogin.jpg"  
+    HeightRequest="150"
+                   
+    />
+      
+            <!-- Icono del usuario -->
+            <Image Grid.Row="1" Grid.Column="0" Source="user.png"  HeightRequest="25" HorizontalOptions="Center" />
+
+            <Entry Placeholder=" Ingrese su usuario:"  Grid.Row="1" Grid.Column="1"  x:Name="txtUsuario"  Margin="10" />
+
+            <Image Grid.Row="2"  Grid.Column="0"  Source="passw.png"  HeightRequest="26" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Ingrese su contrasena: " IsPassword="True" Grid.Row="2"  Grid.Column="1" x:Name="txtContraseña" Margin="10" />
+
+            <Button Grid.Row="3" Grid.Column="1" Text="Iniciar sesión" x:Name="InicioSesion"
+                   
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Clicked="InicioSesion_Clicked_1"
+                    Margin="20"
+                    StyleClass="login-button"
+                   ImageSource="logout.png"           
+
+
+                />
+
+      
+                <Label x:Name="lblRecuperarPass"
+                Text="RecuperarContaseña"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       Margin="15"/>
+            <Label x:Name="Registrarse"
+                   HorizontalTextAlignment="End"
+              Text="Registrarse"
+                   Grid.Row="4"
+                    Grid.Column="1"
+                   Margin="15"/>
+
+        </Grid>
+
+    </VerticalStackLayout>
+        </ScrollView>
+</ContentPage>
